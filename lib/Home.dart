@@ -10,14 +10,13 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
-
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
   void initState() {
     super.initState();
-    _tabController= TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -32,6 +31,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
       appBar: AppBar(
         title: Text("aprenda Inglês"),
         bottom: TabBar(
+          indicatorWeight: 4,
+          indicatorColor: Colors.white,
+          labelStyle: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+          //labelColor: Colors.green[300],
+          //unselectedLabelColor: Colors.green[800],
           controller: _tabController,
           tabs: [
             Tab(
